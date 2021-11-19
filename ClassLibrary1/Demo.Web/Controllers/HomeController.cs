@@ -1,5 +1,6 @@
 ﻿using Demo.Domain;
 using Demo.Service.Interface;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,8 +24,11 @@ namespace Demo.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Send(TargetForm target)
         {
-            var aa = spt_monitorService.CheckIsForgetInfo(target);
-            return View();
+            var result = spt_monitorService.CheckIsForgetInfo(target);
+            string message = "";
+            string serverModel = JsonConvert.SerializeObject(result);
+            string serverMessage = JsonConvert.SerializeObject(message);
+            return Json(new { serverModel,serverMessage }, JsonRequestBehavior.AllowGet);
         }
 
 

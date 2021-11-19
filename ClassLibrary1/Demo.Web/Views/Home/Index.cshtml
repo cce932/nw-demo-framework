@@ -13,6 +13,15 @@
     </div>
     @Html.AntiForgeryToken()
     <button class="btn btn-primary" v-on:click="Send">Submit</button>
+
+<div>
+    <p>{{IsForgetPasswordInfo.IsForgetPassword}}</p>
+    <p>{{IsForgetPasswordInfo.ChangeTime}}</p>
+    <p>{{IsForgetPasswordInfo.Email}}</p>
+    <p>{{IsForgetPasswordInfo.IsStudent}}</p>
+    <p>{{IsForgetPasswordInfo.IsEmployee}}</p>
+</div>
+
 </div>
 
 
@@ -26,7 +35,14 @@
                 identity: '',
                 target: ''
             },
-            verificationToken:'',
+            verificationToken: '',
+            IsForgetPasswordInfo: {
+                IsForgetPassword: '',
+                ChangeTime: '',
+                Email: '',
+                IsStudent: '',
+                IsEmployee: '',
+            },
         },
         methods: {
             Send: function () {
@@ -41,7 +57,12 @@
                     },
                     dataType: 'json',
                     success: function (rdatas) {
-                        vm.autoCompletArray = JSON.parse(rdatas.serverModel);
+                        if (JSON.parse(rdatas.serverMessage) == '') {
+                            vm.IsForgetPasswordInfo = JSON.parse(rdatas.serverModel);
+                        }
+                        else {
+                            vm.showAlert(JSON.parse(rdatas.serverMessage), true);
+                        }
                     },
                     error: function (jqXHR, errorThrown) {
                         alert(errorThrown);

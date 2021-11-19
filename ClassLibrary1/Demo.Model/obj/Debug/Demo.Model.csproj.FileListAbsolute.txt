@@ -17,7 +17,6 @@ C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\bin\D
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\bin\Debug\EntityFramework.xml
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.csprojAssemblyReference.cache
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.csproj.CoreCompileInputs.cache
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.csproj.CopyComplete
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.dll

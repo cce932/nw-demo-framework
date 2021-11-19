@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -42,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="interface\Istu_StatusRepository.cs" />
+    <Compile Include="interface\Ioutgoing_StuRepository.cs" />
+    <Compile Include="interface\Isys_SSOPwdRepository.cs" />
+    <Compile Include="stu_StatusRepository.cs" />
+    <Compile Include="outgoing_StuRepository.cs" />
+    <Compile Include="sys_SSOPwdRepository.cs" />
     <Compile Include="spt_monitorRepository.cs" />
     <Compile Include="interface\Ispt_monitorRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -65,6 +65,119 @@
           <Property Name="LookCheck" Type="nchar" MaxLength="100" Nullable="false" />
           <Property Name="PDProtect_mark" Type="nchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Outgoing_Stu">
+          <Key>
+            <PropertyRef Name="StudentNo" />
+          </Key>
+          <Property Name="StudentNo" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="ApplyType" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="StudentName" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="StudentEngName" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="ApplyDepartment" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="EduCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="PassWord" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="PassPortNo" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="Country" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="Sex" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="Birthday" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Period" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Grade" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="NowTel" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="AlwaysAdd" Type="char" MaxLength="300" Nullable="false" />
+          <Property Name="NowAdd" Type="char" MaxLength="300" Nullable="false" />
+          <Property Name="TaiwanTel" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Email" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="OSchool" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="ODepartment" Type="char" MaxLength="75" Nullable="false" />
+          <Property Name="SemesterS" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="SemesterE" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="ExitDate" Type="char" MaxLength="9" Nullable="false" />
+          <Property Name="NonRegister" Type="char" MaxLength="9" Nullable="false" />
+          <Property Name="Liaison_Name" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Liaison_Relation" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="Liaison_Tel" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Liaison_Email" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="Note1" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="Note2" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="Note3" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="OriPassWord" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="CIDCard" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="CreateDateTime" Type="char" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Stu_Status">
+          <Key>
+            <PropertyRef Name="StudentNo" />
+          </Key>
+          <Property Name="StudentNo" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="Semester" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="CreateDateTime" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="CIDCard" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="StudentName" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="StudentEngName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDCard" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="BornLoc" Type="char" MaxLength="80" Nullable="false" />
+          <Property Name="Birthday" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="EduCode" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="Ch_EduCode" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="NowCondition" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="RegisterLoc" Type="char" MaxLength="16" Nullable="false" />
+          <Property Name="Sex" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="AlwaysTel" Type="char" MaxLength="25" Nullable="false" />
+          <Property Name="AlwaysAddress" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="NowTel" Type="char" MaxLength="25" Nullable="false" />
+          <Property Name="NowAddress" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="MobilePhone" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="StudentSource" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="EnterDate" Type="char" MaxLength="14" Nullable="false" />
+          <Property Name="EnterCode" Type="char" MaxLength="45" Nullable="false" />
+          <Property Name="AbroadMark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="IndigenousMark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="MaimedMark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ForeignerMark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="OtherMark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="OutsideMark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Studyperiod" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="ParentsName" Type="nchar" MaxLength="35" Nullable="false" />
+          <Property Name="ParentsYear" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="ParentsOccupation" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="ParentsRebtion" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="ParentsAddress" Type="char" MaxLength="70" Nullable="false" />
+          <Property Name="ParentsTel" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="Account" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="StudyMark" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Note" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="Password" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="Now_Level" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="StopMark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="OutEmail" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="NewStu_Mark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="BloodType" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="RegisterAddress" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="GeneralMark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="MongoTibetanMark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="MotionMark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ChangeDep_Mark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="TimeOf_Mark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="DoubleDegrees_Mark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="AssistDep_Mark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="AddscoreMark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Addmark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ChangeSch_Mark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Duplex_Stu" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="TaxSendMark" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="TaxRegisterAddress" Type="nchar" MaxLength="200" Nullable="false" />
+          <Property Name="Ori_EduCode" Type="nchar" MaxLength="15" Nullable="false" />
+          <Property Name="edu_note" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="DualDegree_Mark" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="China_Mark" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="EryPwd" Type="varbinary" MaxLength="128" />
+          <Property Name="EryID" Type="varbinary" MaxLength="128" />
+          <Property Name="C6C8_mark" Type="nchar" MaxLength="2" Nullable="false" />
+          <Property Name="PDProtect_mark" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Auth_mark" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Alumni_Agree" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="VisitingRelativesMark" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="sys_SSOPwd">
           <Key>
             <PropertyRef Name="Account" />
@@ -77,6 +190,8 @@
         </EntityType>
         <EntityContainer Name="ntust_infoModelStoreContainer">
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Outgoing_Stu" EntityType="Self.Outgoing_Stu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stu_Status" EntityType="Self.Stu_Status" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sys_SSOPwd" EntityType="Self.sys_SSOPwd" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -146,6 +261,8 @@
         <EntityContainer Name="ntust_infoEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Employee" EntityType="Self.Employee" />
           <EntitySet Name="sys_SSOPwd" EntityType="ntust_infoModel.sys_SSOPwd" />
+          <EntitySet Name="Outgoing_Stu" EntityType="ntust_infoModel.Outgoing_Stu" />
+          <EntitySet Name="Stu_Status" EntityType="ntust_infoModel.Stu_Status" />
         </EntityContainer>
         <EntityType Name="sys_SSOPwd">
           <Key>
@@ -156,6 +273,119 @@
           <Property Name="PwdSalt" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="ChangeDt" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="IsForgot" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Outgoing_Stu">
+          <Key>
+            <PropertyRef Name="StudentNo" />
+          </Key>
+          <Property Name="StudentNo" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="ApplyType" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="StudentName" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="StudentEngName" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="ApplyDepartment" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="EduCode" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PassWord" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PassPortNo" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="Sex" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="Birthday" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Period" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Grade" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="NowTel" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="AlwaysAdd" Type="String" Nullable="false" MaxLength="300" FixedLength="true" Unicode="false" />
+          <Property Name="NowAdd" Type="String" Nullable="false" MaxLength="300" FixedLength="true" Unicode="false" />
+          <Property Name="TaiwanTel" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="OSchool" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="ODepartment" Type="String" Nullable="false" MaxLength="75" FixedLength="true" Unicode="false" />
+          <Property Name="SemesterS" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="SemesterE" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="ExitDate" Type="String" Nullable="false" MaxLength="9" FixedLength="true" Unicode="false" />
+          <Property Name="NonRegister" Type="String" Nullable="false" MaxLength="9" FixedLength="true" Unicode="false" />
+          <Property Name="Liaison_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="Liaison_Relation" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="Liaison_Tel" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="Liaison_Email" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="Note1" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="Note2" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="Note3" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="OriPassWord" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="CIDCard" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="CreateDateTime" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Stu_Status">
+          <Key>
+            <PropertyRef Name="StudentNo" />
+          </Key>
+          <Property Name="StudentNo" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Semester" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="CreateDateTime" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="CIDCard" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="StudentName" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="StudentEngName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDCard" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="BornLoc" Type="String" Nullable="false" MaxLength="80" FixedLength="true" Unicode="false" />
+          <Property Name="Birthday" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="EduCode" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="Ch_EduCode" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="NowCondition" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="RegisterLoc" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="Sex" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="AlwaysTel" Type="String" Nullable="false" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="AlwaysAddress" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NowTel" Type="String" Nullable="false" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="NowAddress" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="MobilePhone" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="StudentSource" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="EnterDate" Type="String" Nullable="false" MaxLength="14" FixedLength="true" Unicode="false" />
+          <Property Name="EnterCode" Type="String" Nullable="false" MaxLength="45" FixedLength="true" Unicode="false" />
+          <Property Name="AbroadMark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="IndigenousMark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MaimedMark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ForeignerMark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="OtherMark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="OutsideMark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Studyperiod" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ParentsName" Type="String" Nullable="false" MaxLength="35" FixedLength="true" Unicode="true" />
+          <Property Name="ParentsYear" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ParentsOccupation" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="ParentsRebtion" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="ParentsAddress" Type="String" Nullable="false" MaxLength="70" FixedLength="true" Unicode="false" />
+          <Property Name="ParentsTel" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="Account" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="StudyMark" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Note" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="Now_Level" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="StopMark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="OutEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="NewStu_Mark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="BloodType" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="RegisterAddress" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="GeneralMark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MongoTibetanMark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MotionMark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ChangeDep_Mark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="TimeOf_Mark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DoubleDegrees_Mark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AssistDep_Mark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AddscoreMark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Addmark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ChangeSch_Mark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Duplex_Stu" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="TaxSendMark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="TaxRegisterAddress" Type="String" Nullable="false" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="Ori_EduCode" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="edu_note" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="DualDegree_Mark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="China_Mark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="EryPwd" Type="Binary" MaxLength="128" FixedLength="false" />
+          <Property Name="EryID" Type="Binary" MaxLength="128" FixedLength="false" />
+          <Property Name="C6C8_mark" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="PDProtect_mark" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Auth_mark" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Alumni_Agree" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="VisitingRelativesMark" Type="Boolean" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -232,6 +462,121 @@
                 <ScalarProperty Name="PwdSalt" ColumnName="PwdSalt" />
                 <ScalarProperty Name="PwdHash" ColumnName="PwdHash" />
                 <ScalarProperty Name="Account" ColumnName="Account" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Outgoing_Stu">
+            <EntityTypeMapping TypeName="ntust_infoModel.Outgoing_Stu">
+              <MappingFragment StoreEntitySet="Outgoing_Stu">
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+                <ScalarProperty Name="OriPassWord" ColumnName="OriPassWord" />
+                <ScalarProperty Name="Note3" ColumnName="Note3" />
+                <ScalarProperty Name="Note2" ColumnName="Note2" />
+                <ScalarProperty Name="Note1" ColumnName="Note1" />
+                <ScalarProperty Name="Liaison_Email" ColumnName="Liaison_Email" />
+                <ScalarProperty Name="Liaison_Tel" ColumnName="Liaison_Tel" />
+                <ScalarProperty Name="Liaison_Relation" ColumnName="Liaison_Relation" />
+                <ScalarProperty Name="Liaison_Name" ColumnName="Liaison_Name" />
+                <ScalarProperty Name="NonRegister" ColumnName="NonRegister" />
+                <ScalarProperty Name="ExitDate" ColumnName="ExitDate" />
+                <ScalarProperty Name="SemesterE" ColumnName="SemesterE" />
+                <ScalarProperty Name="SemesterS" ColumnName="SemesterS" />
+                <ScalarProperty Name="ODepartment" ColumnName="ODepartment" />
+                <ScalarProperty Name="OSchool" ColumnName="OSchool" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="TaiwanTel" ColumnName="TaiwanTel" />
+                <ScalarProperty Name="NowAdd" ColumnName="NowAdd" />
+                <ScalarProperty Name="AlwaysAdd" ColumnName="AlwaysAdd" />
+                <ScalarProperty Name="NowTel" ColumnName="NowTel" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="PassPortNo" ColumnName="PassPortNo" />
+                <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+                <ScalarProperty Name="EduCode" ColumnName="EduCode" />
+                <ScalarProperty Name="ApplyDepartment" ColumnName="ApplyDepartment" />
+                <ScalarProperty Name="StudentEngName" ColumnName="StudentEngName" />
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="ApplyType" ColumnName="ApplyType" />
+                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stu_Status">
+            <EntityTypeMapping TypeName="ntust_infoModel.Stu_Status">
+              <MappingFragment StoreEntitySet="Stu_Status">
+                <ScalarProperty Name="VisitingRelativesMark" ColumnName="VisitingRelativesMark" />
+                <ScalarProperty Name="Alumni_Agree" ColumnName="Alumni_Agree" />
+                <ScalarProperty Name="Auth_mark" ColumnName="Auth_mark" />
+                <ScalarProperty Name="PDProtect_mark" ColumnName="PDProtect_mark" />
+                <ScalarProperty Name="C6C8_mark" ColumnName="C6C8_mark" />
+                <ScalarProperty Name="EryID" ColumnName="EryID" />
+                <ScalarProperty Name="EryPwd" ColumnName="EryPwd" />
+                <ScalarProperty Name="China_Mark" ColumnName="China_Mark" />
+                <ScalarProperty Name="DualDegree_Mark" ColumnName="DualDegree_Mark" />
+                <ScalarProperty Name="edu_note" ColumnName="edu_note" />
+                <ScalarProperty Name="Ori_EduCode" ColumnName="Ori_EduCode" />
+                <ScalarProperty Name="TaxRegisterAddress" ColumnName="TaxRegisterAddress" />
+                <ScalarProperty Name="TaxSendMark" ColumnName="TaxSendMark" />
+                <ScalarProperty Name="Duplex_Stu" ColumnName="Duplex_Stu" />
+                <ScalarProperty Name="ChangeSch_Mark" ColumnName="ChangeSch_Mark" />
+                <ScalarProperty Name="Addmark" ColumnName="Addmark" />
+                <ScalarProperty Name="AddscoreMark" ColumnName="AddscoreMark" />
+                <ScalarProperty Name="AssistDep_Mark" ColumnName="AssistDep_Mark" />
+                <ScalarProperty Name="DoubleDegrees_Mark" ColumnName="DoubleDegrees_Mark" />
+                <ScalarProperty Name="TimeOf_Mark" ColumnName="TimeOf_Mark" />
+                <ScalarProperty Name="ChangeDep_Mark" ColumnName="ChangeDep_Mark" />
+                <ScalarProperty Name="MotionMark" ColumnName="MotionMark" />
+                <ScalarProperty Name="MongoTibetanMark" ColumnName="MongoTibetanMark" />
+                <ScalarProperty Name="GeneralMark" ColumnName="GeneralMark" />
+                <ScalarProperty Name="RegisterAddress" ColumnName="RegisterAddress" />
+                <ScalarProperty Name="BloodType" ColumnName="BloodType" />
+                <ScalarProperty Name="NewStu_Mark" ColumnName="NewStu_Mark" />
+                <ScalarProperty Name="OutEmail" ColumnName="OutEmail" />
+                <ScalarProperty Name="StopMark" ColumnName="StopMark" />
+                <ScalarProperty Name="Now_Level" ColumnName="Now_Level" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="StudyMark" ColumnName="StudyMark" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="ParentsTel" ColumnName="ParentsTel" />
+                <ScalarProperty Name="ParentsAddress" ColumnName="ParentsAddress" />
+                <ScalarProperty Name="ParentsRebtion" ColumnName="ParentsRebtion" />
+                <ScalarProperty Name="ParentsOccupation" ColumnName="ParentsOccupation" />
+                <ScalarProperty Name="ParentsYear" ColumnName="ParentsYear" />
+                <ScalarProperty Name="ParentsName" ColumnName="ParentsName" />
+                <ScalarProperty Name="Studyperiod" ColumnName="Studyperiod" />
+                <ScalarProperty Name="OutsideMark" ColumnName="OutsideMark" />
+                <ScalarProperty Name="OtherMark" ColumnName="OtherMark" />
+                <ScalarProperty Name="ForeignerMark" ColumnName="ForeignerMark" />
+                <ScalarProperty Name="MaimedMark" ColumnName="MaimedMark" />
+                <ScalarProperty Name="IndigenousMark" ColumnName="IndigenousMark" />
+                <ScalarProperty Name="AbroadMark" ColumnName="AbroadMark" />
+                <ScalarProperty Name="EnterCode" ColumnName="EnterCode" />
+                <ScalarProperty Name="EnterDate" ColumnName="EnterDate" />
+                <ScalarProperty Name="StudentSource" ColumnName="StudentSource" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="NowAddress" ColumnName="NowAddress" />
+                <ScalarProperty Name="NowTel" ColumnName="NowTel" />
+                <ScalarProperty Name="AlwaysAddress" ColumnName="AlwaysAddress" />
+                <ScalarProperty Name="AlwaysTel" ColumnName="AlwaysTel" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="RegisterLoc" ColumnName="RegisterLoc" />
+                <ScalarProperty Name="NowCondition" ColumnName="NowCondition" />
+                <ScalarProperty Name="Ch_EduCode" ColumnName="Ch_EduCode" />
+                <ScalarProperty Name="EduCode" ColumnName="EduCode" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="BornLoc" ColumnName="BornLoc" />
+                <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+                <ScalarProperty Name="StudentEngName" ColumnName="StudentEngName" />
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="Semester" ColumnName="Semester" />
+                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

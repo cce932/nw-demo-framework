@@ -26,6 +26,8 @@ namespace Demo.EntityFramework
         }
     
         public virtual DbSet<Employee> Employee { get; set; }
-        public virtual DbSet<sys_SSOPwd> sys_SSOPwd { get; set; }
+        public virtual DbSet<Outgoing_Stu> sys_SSOPwd { get; set; }
+        public virtual DbSet<Outgoing_Stu> Outgoing_Stu { get; set; }
+        public virtual DbSet<Stu_Status> Stu_Status { get; set; }
     }
 }

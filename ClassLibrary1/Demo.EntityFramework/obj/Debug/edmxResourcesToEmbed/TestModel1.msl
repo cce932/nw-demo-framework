@@ -62,5 +62,131 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="sys_SSOPwd">
+      <EntityTypeMapping TypeName="ntust_infoModel.sys_SSOPwd">
+        <MappingFragment StoreEntitySet="sys_SSOPwd">
+          <ScalarProperty Name="IsForgot" ColumnName="IsForgot" />
+          <ScalarProperty Name="ChangeDt" ColumnName="ChangeDt" />
+          <ScalarProperty Name="PwdSalt" ColumnName="PwdSalt" />
+          <ScalarProperty Name="PwdHash" ColumnName="PwdHash" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Outgoing_Stu">
+      <EntityTypeMapping TypeName="ntust_infoModel.Outgoing_Stu">
+        <MappingFragment StoreEntitySet="Outgoing_Stu">
+          <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+          <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+          <ScalarProperty Name="OriPassWord" ColumnName="OriPassWord" />
+          <ScalarProperty Name="Note3" ColumnName="Note3" />
+          <ScalarProperty Name="Note2" ColumnName="Note2" />
+          <ScalarProperty Name="Note1" ColumnName="Note1" />
+          <ScalarProperty Name="Liaison_Email" ColumnName="Liaison_Email" />
+          <ScalarProperty Name="Liaison_Tel" ColumnName="Liaison_Tel" />
+          <ScalarProperty Name="Liaison_Relation" ColumnName="Liaison_Relation" />
+          <ScalarProperty Name="Liaison_Name" ColumnName="Liaison_Name" />
+          <ScalarProperty Name="NonRegister" ColumnName="NonRegister" />
+          <ScalarProperty Name="ExitDate" ColumnName="ExitDate" />
+          <ScalarProperty Name="SemesterE" ColumnName="SemesterE" />
+          <ScalarProperty Name="SemesterS" ColumnName="SemesterS" />
+          <ScalarProperty Name="ODepartment" ColumnName="ODepartment" />
+          <ScalarProperty Name="OSchool" ColumnName="OSchool" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TaiwanTel" ColumnName="TaiwanTel" />
+          <ScalarProperty Name="NowAdd" ColumnName="NowAdd" />
+          <ScalarProperty Name="AlwaysAdd" ColumnName="AlwaysAdd" />
+          <ScalarProperty Name="NowTel" ColumnName="NowTel" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PassPortNo" ColumnName="PassPortNo" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="EduCode" ColumnName="EduCode" />
+          <ScalarProperty Name="ApplyDepartment" ColumnName="ApplyDepartment" />
+          <ScalarProperty Name="StudentEngName" ColumnName="StudentEngName" />
+          <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+          <ScalarProperty Name="ApplyType" ColumnName="ApplyType" />
+          <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stu_Status">
+      <EntityTypeMapping TypeName="ntust_infoModel.Stu_Status">
+        <MappingFragment StoreEntitySet="Stu_Status">
+          <ScalarProperty Name="VisitingRelativesMark" ColumnName="VisitingRelativesMark" />
+          <ScalarProperty Name="Alumni_Agree" ColumnName="Alumni_Agree" />
+          <ScalarProperty Name="Auth_mark" ColumnName="Auth_mark" />
+          <ScalarProperty Name="PDProtect_mark" ColumnName="PDProtect_mark" />
+          <ScalarProperty Name="C6C8_mark" ColumnName="C6C8_mark" />
+          <ScalarProperty Name="EryID" ColumnName="EryID" />
+          <ScalarProperty Name="EryPwd" ColumnName="EryPwd" />
+          <ScalarProperty Name="China_Mark" ColumnName="China_Mark" />
+          <ScalarProperty Name="DualDegree_Mark" ColumnName="DualDegree_Mark" />
+          <ScalarProperty Name="edu_note" ColumnName="edu_note" />
+          <ScalarProperty Name="Ori_EduCode" ColumnName="Ori_EduCode" />
+          <ScalarProperty Name="TaxRegisterAddress" ColumnName="TaxRegisterAddress" />
+          <ScalarProperty Name="TaxSendMark" ColumnName="TaxSendMark" />
+          <ScalarProperty Name="Duplex_Stu" ColumnName="Duplex_Stu" />
+          <ScalarProperty Name="ChangeSch_Mark" ColumnName="ChangeSch_Mark" />
+          <ScalarProperty Name="Addmark" ColumnName="Addmark" />
+          <ScalarProperty Name="AddscoreMark" ColumnName="AddscoreMark" />
+          <ScalarProperty Name="AssistDep_Mark" ColumnName="AssistDep_Mark" />
+          <ScalarProperty Name="DoubleDegrees_Mark" ColumnName="DoubleDegrees_Mark" />
+          <ScalarProperty Name="TimeOf_Mark" ColumnName="TimeOf_Mark" />
+          <ScalarProperty Name="ChangeDep_Mark" ColumnName="ChangeDep_Mark" />
+          <ScalarProperty Name="MotionMark" ColumnName="MotionMark" />
+          <ScalarProperty Name="MongoTibetanMark" ColumnName="MongoTibetanMark" />
+          <ScalarProperty Name="GeneralMark" ColumnName="GeneralMark" />
+          <ScalarProperty Name="RegisterAddress" ColumnName="RegisterAddress" />
+          <ScalarProperty Name="BloodType" ColumnName="BloodType" />
+          <ScalarProperty Name="NewStu_Mark" ColumnName="NewStu_Mark" />
+          <ScalarProperty Name="OutEmail" ColumnName="OutEmail" />
+          <ScalarProperty Name="StopMark" ColumnName="StopMark" />
+          <ScalarProperty Name="Now_Level" ColumnName="Now_Level" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="StudyMark" ColumnName="StudyMark" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="ParentsTel" ColumnName="ParentsTel" />
+          <ScalarProperty Name="ParentsAddress" ColumnName="ParentsAddress" />
+          <ScalarProperty Name="ParentsRebtion" ColumnName="ParentsRebtion" />
+          <ScalarProperty Name="ParentsOccupation" ColumnName="ParentsOccupation" />
+          <ScalarProperty Name="ParentsYear" ColumnName="ParentsYear" />
+          <ScalarProperty Name="ParentsName" ColumnName="ParentsName" />
+          <ScalarProperty Name="Studyperiod" ColumnName="Studyperiod" />
+          <ScalarProperty Name="OutsideMark" ColumnName="OutsideMark" />
+          <ScalarProperty Name="OtherMark" ColumnName="OtherMark" />
+          <ScalarProperty Name="ForeignerMark" ColumnName="ForeignerMark" />
+          <ScalarProperty Name="MaimedMark" ColumnName="MaimedMark" />
+          <ScalarProperty Name="IndigenousMark" ColumnName="IndigenousMark" />
+          <ScalarProperty Name="AbroadMark" ColumnName="AbroadMark" />
+          <ScalarProperty Name="EnterCode" ColumnName="EnterCode" />
+          <ScalarProperty Name="EnterDate" ColumnName="EnterDate" />
+          <ScalarProperty Name="StudentSource" ColumnName="StudentSource" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="NowAddress" ColumnName="NowAddress" />
+          <ScalarProperty Name="NowTel" ColumnName="NowTel" />
+          <ScalarProperty Name="AlwaysAddress" ColumnName="AlwaysAddress" />
+          <ScalarProperty Name="AlwaysTel" ColumnName="AlwaysTel" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="RegisterLoc" ColumnName="RegisterLoc" />
+          <ScalarProperty Name="NowCondition" ColumnName="NowCondition" />
+          <ScalarProperty Name="Ch_EduCode" ColumnName="Ch_EduCode" />
+          <ScalarProperty Name="EduCode" ColumnName="EduCode" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="BornLoc" ColumnName="BornLoc" />
+          <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+          <ScalarProperty Name="StudentEngName" ColumnName="StudentEngName" />
+          <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+          <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+          <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+          <ScalarProperty Name="Semester" ColumnName="Semester" />
+          <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
