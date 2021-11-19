@@ -11,7 +11,8 @@
         <label for="Target" class="form-label">身分證/學號</label>
         <input type="text" class="form-control" id="Target" v-model="form.target">
     </div>
-    <button  class="btn btn-primary" v-on:click="Send">Submit</button>
+    @Html.AntiForgeryToken()
+    <button class="btn btn-primary" v-on:click="Send">Submit</button>
 </div>
 
 
@@ -24,15 +25,20 @@
             form: {
                 identity: '',
                 target: ''
-            }
+            },
+            verificationToken:'',
         },
         methods: {
             Send: function () {
                 ///範例14:取得學年度 採用 ajax post
                 var vm = this;
                 $.ajax({
-                    url: "@Url.Action("AutoComplet", "VueDemo")",
-                    type: "get",
+                    url: "@Url.Action("Send", "Home")",
+                    type: "post",
+                    data: {
+                        'target': vm.form,
+                        "__RequestVerificationToken": vm.verificationToken,
+                    },
                     dataType: 'json',
                     success: function (rdatas) {
                         vm.autoCompletArray = JSON.parse(rdatas.serverModel);
@@ -44,7 +50,7 @@
             }
         },
         created: function () {
-
+            this.verificationToken = $('input[name="__RequestVerificationToken"]').val();
         },
         filters: {
 

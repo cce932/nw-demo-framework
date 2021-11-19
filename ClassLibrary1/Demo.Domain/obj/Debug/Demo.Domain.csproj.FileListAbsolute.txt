@@ -1,0 +1,6 @@
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Domain\bin\Debug\Demo.Domain.dll
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Domain\bin\Debug\Demo.Domain.pdb
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Domain\obj\Debug\Demo.Domain.csprojAssemblyReference.cache
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Domain\obj\Debug\Demo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Domain\obj\Debug\Demo.Domain.dll
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Domain\obj\Debug\Demo.Domain.pdb

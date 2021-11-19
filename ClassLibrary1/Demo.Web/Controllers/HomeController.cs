@@ -1,4 +1,5 @@
-﻿using Demo.Service.Interface;
+﻿using Demo.Domain;
+using Demo.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,23 +16,17 @@ namespace Demo.Web.Controllers
         }
         public ActionResult Index()
         {
-            var aa =  spt_monitorService.GetAll();
             return View();
         }
 
-        public ActionResult About()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Send(TargetForm target)
         {
-            ViewBag.Message = "Your application description page.";
-
-
+            var aa = spt_monitorService.CheckIsForgetInfo(target);
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
     }
 }

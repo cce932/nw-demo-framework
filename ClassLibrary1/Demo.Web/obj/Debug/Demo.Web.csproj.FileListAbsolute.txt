@@ -246,3 +246,5 @@ C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Web\obj\Deb
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Web\obj\Debug\Demo.Web.csproj.CopyComplete
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Web\obj\Debug\Demo.Web.dll
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Web\obj\Debug\Demo.Web.pdb
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Web\bin\Demo.Domain.dll
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Web\bin\Demo.Domain.pdb

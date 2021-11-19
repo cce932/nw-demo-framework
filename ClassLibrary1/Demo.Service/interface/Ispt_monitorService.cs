@@ -1,4 +1,5 @@
-﻿using Demo.EntityFramework;
+﻿using Demo.Domain;
+using Demo.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,11 @@ namespace Demo.Service.Interface
 {
     public interface Ispt_monitorService
     {
-        List<Employee> GetAll();
+        /// <summary>
+        /// 檢查是否忘記密碼資訊
+        /// </summary>
+        /// <param name="targetForm"></param>
+        /// <returns></returns>
+        IsForgetPasswordInfo CheckIsForgetInfo(TargetForm targetForm);
     }
 }

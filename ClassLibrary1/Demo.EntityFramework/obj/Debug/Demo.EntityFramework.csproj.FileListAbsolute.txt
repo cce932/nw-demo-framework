@@ -20,7 +20,6 @@ C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFrame
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFramework\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFramework\bin\Debug\zh-Hant\EntityFramework.resources.dll
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFramework\bin\Debug\zh-Hant\EntityFramework.SqlServer.resources.dll
-C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFramework\obj\Debug\Demo.EntityFramework.csprojAssemblyReference.cache
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFramework\obj\Debug\Demo.EntityFramework.csproj.CoreCompileInputs.cache
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFramework\obj\Debug\Demo.EntityFramework.csproj.CopyComplete
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFramework\obj\Debug\Demo.EntityFramework.dll

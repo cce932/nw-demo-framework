@@ -10,3 +10,15 @@ C:\Users\user\source\repos\ClassLibrary1\Demo.Model\bin\Debug\EntityFramework.xm
 C:\Users\user\source\repos\ClassLibrary1\Demo.Model\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\user\source\repos\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.csprojAssemblyReference.cache
 C:\Users\user\source\repos\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.csproj.CopyComplete
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\bin\Debug\Demo.Model.dll.config
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\bin\Debug\Demo.Model.dll
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\bin\Debug\Demo.Model.pdb
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\bin\Debug\EntityFramework.dll
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\bin\Debug\EntityFramework.xml
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.csprojAssemblyReference.cache
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.csproj.CopyComplete
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.dll
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.pdb
