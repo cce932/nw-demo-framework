@@ -21,3 +21,4 @@ C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\D
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.csproj.CopyComplete
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.dll
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.pdb
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Model\obj\Debug\Demo.Model.csprojAssemblyReference.cache

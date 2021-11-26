@@ -9,6 +9,13 @@
         <EntityTypeShape EntityType="ntust_infoModel.sys_SSOPwd" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="ntust_infoModel.Outgoing_Stu" Width="1.5" PointX="3.375" PointY="3.75" />
         <EntityTypeShape EntityType="ntust_infoModel.Stu_Status" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ntust_infoModel.Cont_employee" Width="1.75" PointX="8" PointY="0.75" />
+        <EntityTypeShape EntityType="ntust_infoModel.Sch_Organ" Width="1.75" PointX="8" PointY="8.75" />
+        <EntityTypeShape EntityType="ntust_infoModel.sysdiagrams" Width="1.75" PointX="10" PointY="0.75" />
+        <EntityTypeShape EntityType="ntust_infoModel.v_AD_Labor" Width="1.75" PointX="10" PointY="3.75" />
+        <EntityTypeShape EntityType="ntust_infoModel.v_AD_List" Width="1.75" PointX="12" PointY="0.75" />
+        <EntityTypeShape EntityType="ntust_infoModel.v_nowperson_w" Width="1.75" PointX="12" PointY="5.75" />
+        <EntityTypeShape EntityType="ntust_infoModel.v_schoolmember" Width="1.75" PointX="12" PointY="9.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

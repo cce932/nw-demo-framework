@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProjectEmpInfo.cs" />
     <Compile Include="IsForgetPasswordInfo.cs" />
     <Compile Include="TargetForm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

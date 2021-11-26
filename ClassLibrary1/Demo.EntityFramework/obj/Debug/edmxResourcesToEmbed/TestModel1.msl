@@ -188,5 +188,181 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Cont_employee">
+      <EntityTypeMapping TypeName="ntust_infoModel.Cont_employee">
+        <MappingFragment StoreEntitySet="Cont_employee">
+          <ScalarProperty Name="AddressReg" ColumnName="AddressReg" />
+          <ScalarProperty Name="AddressRegZipText" ColumnName="AddressRegZipText" />
+          <ScalarProperty Name="AddressRegZipId" ColumnName="AddressRegZipId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="AddressZipText" ColumnName="AddressZipText" />
+          <ScalarProperty Name="AddressZipId" ColumnName="AddressZipId" />
+          <ScalarProperty Name="Annbouns_salary" ColumnName="Annbouns_salary" />
+          <ScalarProperty Name="Annbouns_month" ColumnName="Annbouns_month" />
+          <ScalarProperty Name="Annbouns" ColumnName="Annbouns" />
+          <ScalarProperty Name="CPensionRate" ColumnName="CPensionRate" />
+          <ScalarProperty Name="Taxrate" ColumnName="Taxrate" />
+          <ScalarProperty Name="UDateTime" ColumnName="UDateTime" />
+          <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Foreignmk" ColumnName="Foreignmk" />
+          <ScalarProperty Name="Retired" ColumnName="Retired" />
+          <ScalarProperty Name="Aborigine" ColumnName="Aborigine" />
+          <ScalarProperty Name="Subsidy" ColumnName="Subsidy" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobilephone" ColumnName="Mobilephone" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Pno" ColumnName="Pno" />
+          <ScalarProperty Name="IDcard" ColumnName="IDcard" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sch_Organ">
+      <EntityTypeMapping TypeName="ntust_infoModel.Sch_Organ">
+        <MappingFragment StoreEntitySet="Sch_Organ">
+          <ScalarProperty Name="AccountingCode" ColumnName="AccountingCode" />
+          <ScalarProperty Name="Other_mark" ColumnName="Other_mark" />
+          <ScalarProperty Name="ManagerTitle" ColumnName="ManagerTitle" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+          <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+          <ScalarProperty Name="SchLocal" ColumnName="SchLocal" />
+          <ScalarProperty Name="Level2Unit" ColumnName="Level2Unit" />
+          <ScalarProperty Name="Level1Unit" ColumnName="Level1Unit" />
+          <ScalarProperty Name="UnitFax" ColumnName="UnitFax" />
+          <ScalarProperty Name="UnitTel" ColumnName="UnitTel" />
+          <ScalarProperty Name="UnitEmail" ColumnName="UnitEmail" />
+          <ScalarProperty Name="UnitWWW" ColumnName="UnitWWW" />
+          <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="UnitEngShort" ColumnName="UnitEngShort" />
+          <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+          <ScalarProperty Name="UnitEngName" ColumnName="UnitEngName" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ntust_infoModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_AD_Labor">
+      <EntityTypeMapping TypeName="ntust_infoModel.v_AD_Labor">
+        <MappingFragment StoreEntitySet="v_AD_Labor">
+          <ScalarProperty Name="FamilyNum" ColumnName="FamilyNum" />
+          <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="UDateTime" ColumnName="UDateTime" />
+          <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="FamilyHealth" ColumnName="FamilyHealth" />
+          <ScalarProperty Name="EmpHealth" ColumnName="EmpHealth" />
+          <ScalarProperty Name="EmpPension" ColumnName="EmpPension" />
+          <ScalarProperty Name="EmpLabor" ColumnName="EmpLabor" />
+          <ScalarProperty Name="SelfHealth" ColumnName="SelfHealth" />
+          <ScalarProperty Name="SelfPension" ColumnName="SelfPension" />
+          <ScalarProperty Name="SelfLabor" ColumnName="SelfLabor" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Pensionrate" ColumnName="Pensionrate" />
+          <ScalarProperty Name="YearEndBonuses" ColumnName="YearEndBonuses" />
+          <ScalarProperty Name="YearEndMonth" ColumnName="YearEndMonth" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="QuitDate" ColumnName="QuitDate" />
+          <ScalarProperty Name="Term_end" ColumnName="Term_end" />
+          <ScalarProperty Name="Term_from" ColumnName="Term_from" />
+          <ScalarProperty Name="SubLeader" ColumnName="SubLeader" />
+          <ScalarProperty Name="Leader" ColumnName="Leader" />
+          <ScalarProperty Name="Accno" ColumnName="Accno" />
+          <ScalarProperty Name="SpecStatus" ColumnName="SpecStatus" />
+          <ScalarProperty Name="GInsuDesc" ColumnName="GInsuDesc" />
+          <ScalarProperty Name="GovInsu" ColumnName="GovInsu" />
+          <ScalarProperty Name="ListnoSrc" ColumnName="ListnoSrc" />
+          <ScalarProperty Name="AccSource" ColumnName="AccSource" />
+          <ScalarProperty Name="Studyno" ColumnName="Studyno" />
+          <ScalarProperty Name="Statusno" ColumnName="Statusno" />
+          <ScalarProperty Name="ADclass" ColumnName="ADclass" />
+          <ScalarProperty Name="IDcard" ColumnName="IDcard" />
+          <ScalarProperty Name="Listno" ColumnName="Listno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_AD_List">
+      <EntityTypeMapping TypeName="ntust_infoModel.v_AD_List">
+        <MappingFragment StoreEntitySet="v_AD_List">
+          <ScalarProperty Name="BasCheck_Date" ColumnName="BasCheck_Date" />
+          <ScalarProperty Name="BasCheck_name" ColumnName="BasCheck_name" />
+          <ScalarProperty Name="InsCheck_Date" ColumnName="InsCheck_Date" />
+          <ScalarProperty Name="InsCheck_name" ColumnName="InsCheck_name" />
+          <ScalarProperty Name="PerCheck_Date" ColumnName="PerCheck_Date" />
+          <ScalarProperty Name="PerCheck_name" ColumnName="PerCheck_name" />
+          <ScalarProperty Name="ExpirDate" ColumnName="ExpirDate" />
+          <ScalarProperty Name="UDateTime" ColumnName="UDateTime" />
+          <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="StopDate" ColumnName="StopDate" />
+          <ScalarProperty Name="ChangeFrom" ColumnName="ChangeFrom" />
+          <ScalarProperty Name="ConfirmDate" ColumnName="ConfirmDate" />
+          <ScalarProperty Name="Confirm_name" ColumnName="Confirm_name" />
+          <ScalarProperty Name="Confirmed" ColumnName="Confirmed" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+          <ScalarProperty Name="Listno" ColumnName="Listno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_nowperson_w">
+      <EntityTypeMapping TypeName="ntust_infoModel.v_nowperson_w">
+        <MappingFragment StoreEntitySet="v_nowperson_w">
+          <ScalarProperty Name="email2" ColumnName="email2" />
+          <ScalarProperty Name="Worksno" ColumnName="Worksno" />
+          <ScalarProperty Name="Term_end" ColumnName="Term_end" />
+          <ScalarProperty Name="Term_start" ColumnName="Term_start" />
+          <ScalarProperty Name="WorkTitle" ColumnName="WorkTitle" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IDcard" ColumnName="IDcard" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_schoolmember">
+      <EntityTypeMapping TypeName="ntust_infoModel.v_schoolmember">
+        <MappingFragment StoreEntitySet="v_schoolmember">
+          <ScalarProperty Name="cardno" ColumnName="cardno" />
+          <ScalarProperty Name="nowcondition" ColumnName="nowcondition" />
+          <ScalarProperty Name="rank" ColumnName="rank" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="UDDateTime" ColumnName="UDDateTime" />
+          <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+          <ScalarProperty Name="PB_Mark" ColumnName="PB_Mark" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="BankNo" ColumnName="BankNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="IDstatus" ColumnName="IDstatus" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

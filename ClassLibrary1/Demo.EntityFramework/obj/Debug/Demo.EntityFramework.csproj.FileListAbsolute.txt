@@ -24,3 +24,4 @@ C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFrame
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFramework\obj\Debug\Demo.EntityFramework.csproj.CopyComplete
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFramework\obj\Debug\Demo.EntityFramework.dll
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFramework\obj\Debug\Demo.EntityFramework.pdb
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.EntityFramework\obj\Debug\Demo.EntityFramework.csprojAssemblyReference.cache

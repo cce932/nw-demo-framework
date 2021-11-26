@@ -65,6 +65,13 @@
     <EntitySet Name="sys_SSOPwd" EntityType="ntust_infoModel.sys_SSOPwd" />
     <EntitySet Name="Outgoing_Stu" EntityType="ntust_infoModel.Outgoing_Stu" />
     <EntitySet Name="Stu_Status" EntityType="ntust_infoModel.Stu_Status" />
+    <EntitySet Name="Cont_employee" EntityType="ntust_infoModel.Cont_employee" />
+    <EntitySet Name="Sch_Organ" EntityType="ntust_infoModel.Sch_Organ" />
+    <EntitySet Name="sysdiagrams" EntityType="ntust_infoModel.sysdiagrams" />
+    <EntitySet Name="v_AD_Labor" EntityType="ntust_infoModel.v_AD_Labor" />
+    <EntitySet Name="v_AD_List" EntityType="ntust_infoModel.v_AD_List" />
+    <EntitySet Name="v_nowperson_w" EntityType="ntust_infoModel.v_nowperson_w" />
+    <EntitySet Name="v_schoolmember" EntityType="ntust_infoModel.v_schoolmember" />
   </EntityContainer>
   <EntityType Name="sys_SSOPwd">
     <Key>
@@ -188,5 +195,233 @@
     <Property Name="Auth_mark" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
     <Property Name="Alumni_Agree" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
     <Property Name="VisitingRelativesMark" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cont_employee">
+    <Key>
+      <PropertyRef Name="IDcard" />
+    </Key>
+    <Property Name="IDcard" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Pno" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+    <Property Name="Birthday" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="Sex" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Bank" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Account" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Tel" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Mobilephone" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+    <Property Name="Education" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Subsidy" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="Aborigine" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Retired" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Foreignmk" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Nationality" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="true" />
+    <Property Name="Note" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="CIDCard" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="UDateTime" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Taxrate" Type="Int32" Nullable="false" />
+    <Property Name="CPensionRate" Type="Int32" Nullable="false" />
+    <Property Name="Annbouns" Type="Int32" Nullable="false" />
+    <Property Name="Annbouns_month" Type="Int32" Nullable="false" />
+    <Property Name="Annbouns_salary" Type="Int32" Nullable="false" />
+    <Property Name="AddressZipId" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+    <Property Name="AddressZipText" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+    <Property Name="AddressRegZipId" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+    <Property Name="AddressRegZipText" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="AddressReg" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sch_Organ">
+    <Key>
+      <PropertyRef Name="UnitCode" />
+    </Key>
+    <Property Name="UnitName" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="UnitEngName" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="UnitShort" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="UnitEngShort" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="UnitCode" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ManagerName" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="UnitWWW" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="UnitEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="UnitTel" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="UnitFax" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="Level1Unit" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="Level2Unit" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="SchLocal" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="CreateDateTime" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="CIDCard" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Note" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="ManagerTitle" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Other_mark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="AccountingCode" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="v_AD_Labor">
+    <Key>
+      <PropertyRef Name="Listno" />
+      <PropertyRef Name="IDcard" />
+      <PropertyRef Name="ADclass" />
+      <PropertyRef Name="Statusno" />
+      <PropertyRef Name="Studyno" />
+      <PropertyRef Name="AccSource" />
+      <PropertyRef Name="ListnoSrc" />
+      <PropertyRef Name="GovInsu" />
+      <PropertyRef Name="GInsuDesc" />
+      <PropertyRef Name="SpecStatus" />
+      <PropertyRef Name="Accno" />
+      <PropertyRef Name="Leader" />
+      <PropertyRef Name="SubLeader" />
+      <PropertyRef Name="Salary" />
+      <PropertyRef Name="YearEndMonth" />
+      <PropertyRef Name="YearEndBonuses" />
+      <PropertyRef Name="Pensionrate" />
+      <PropertyRef Name="Department" />
+      <PropertyRef Name="SelfLabor" />
+      <PropertyRef Name="SelfPension" />
+      <PropertyRef Name="SelfHealth" />
+      <PropertyRef Name="EmpLabor" />
+      <PropertyRef Name="EmpPension" />
+      <PropertyRef Name="EmpHealth" />
+      <PropertyRef Name="Note" />
+      <PropertyRef Name="CIDCard" />
+      <PropertyRef Name="UDateTime" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="Bonus" />
+      <PropertyRef Name="FamilyNum" />
+    </Key>
+    <Property Name="Listno" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="IDcard" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ADclass" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="Statusno" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Studyno" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="AccSource" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="ListnoSrc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="GovInsu" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="GInsuDesc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SpecStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Accno" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Leader" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SubLeader" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Term_from" Type="DateTime" Precision="3" />
+    <Property Name="Term_end" Type="DateTime" Precision="3" />
+    <Property Name="QuitDate" Type="DateTime" Precision="3" />
+    <Property Name="Salary" Type="Int32" Nullable="false" />
+    <Property Name="YearEndMonth" Type="Double" Nullable="false" />
+    <Property Name="YearEndBonuses" Type="Int32" Nullable="false" />
+    <Property Name="Pensionrate" Type="Int32" Nullable="false" />
+    <Property Name="Department" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SelfLabor" Type="Int32" Nullable="false" />
+    <Property Name="SelfPension" Type="Int32" Nullable="false" />
+    <Property Name="SelfHealth" Type="Int32" Nullable="false" />
+    <Property Name="EmpLabor" Type="Int32" Nullable="false" />
+    <Property Name="EmpPension" Type="Int32" Nullable="false" />
+    <Property Name="EmpHealth" Type="Int32" Nullable="false" />
+    <Property Name="FamilyHealth" Type="Int32" />
+    <Property Name="Note" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CIDCard" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="UDateTime" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectName" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Bonus" Type="Int32" Nullable="false" />
+    <Property Name="FamilyNum" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="v_AD_List">
+    <Key>
+      <PropertyRef Name="Listno" />
+      <PropertyRef Name="Locked" />
+      <PropertyRef Name="Confirmed" />
+      <PropertyRef Name="Confirm_name" />
+      <PropertyRef Name="ChangeFrom" />
+      <PropertyRef Name="Note" />
+      <PropertyRef Name="CIDCard" />
+      <PropertyRef Name="UDateTime" />
+      <PropertyRef Name="PerCheck_name" />
+      <PropertyRef Name="InsCheck_name" />
+      <PropertyRef Name="BasCheck_name" />
+    </Key>
+    <Property Name="Listno" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Locked" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Confirmed" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Confirm_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ConfirmDate" Type="DateTime" Precision="3" />
+    <Property Name="ChangeFrom" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="StopDate" Type="DateTime" Precision="3" />
+    <Property Name="Note" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CIDCard" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UDateTime" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExpirDate" Type="DateTime" Precision="3" />
+    <Property Name="PerCheck_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PerCheck_Date" Type="DateTime" Precision="3" />
+    <Property Name="InsCheck_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="InsCheck_Date" Type="DateTime" Precision="3" />
+    <Property Name="BasCheck_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BasCheck_Date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_nowperson_w">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="Birthday" />
+      <PropertyRef Name="email2" />
+    </Key>
+    <Property Name="unitname" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+    <Property Name="IDcard" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="true" />
+    <Property Name="Birthday" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="WorkTitle" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Term_start" Type="String" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Name="Term_end" Type="String" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Name="Worksno" Type="Int32" />
+    <Property Name="email2" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="v_schoolmember">
+    <Key>
+      <PropertyRef Name="Department" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="IDCard" />
+      <PropertyRef Name="Address" />
+      <PropertyRef Name="IDstatus" />
+      <PropertyRef Name="Tel" />
+      <PropertyRef Name="MobilePhone" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="BankNo" />
+      <PropertyRef Name="Account" />
+      <PropertyRef Name="Note" />
+      <PropertyRef Name="PB_Mark" />
+      <PropertyRef Name="CIDCard" />
+      <PropertyRef Name="UDDateTime" />
+      <PropertyRef Name="jobtitle" />
+      <PropertyRef Name="rank" />
+      <PropertyRef Name="nowcondition" />
+      <PropertyRef Name="cardno" />
+    </Key>
+    <Property Name="Department" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="IDCard" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="IDstatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Tel" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="MobilePhone" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="BankNo" Type="String" Nullable="false" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="Account" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="Note" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="PB_Mark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CIDCard" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="UDDateTime" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="jobtitle" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="rank" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="nowcondition" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="cardno" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
   </EntityType>
 </Schema>

@@ -5,6 +5,42 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="ntust_infoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cont_employee">
+          <Key>
+            <PropertyRef Name="IDcard" />
+          </Key>
+          <Property Name="IDcard" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Pno" Type="nchar" MaxLength="5" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Birthday" Type="nchar" MaxLength="8" Nullable="false" />
+          <Property Name="Sex" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="Bank" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Account" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Tel" Type="nchar" MaxLength="15" Nullable="false" />
+          <Property Name="Mobilephone" Type="nchar" MaxLength="15" Nullable="false" />
+          <Property Name="Email" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Education" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Subsidy" Type="nchar" MaxLength="2" Nullable="false" />
+          <Property Name="Aborigine" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="Retired" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="Foreignmk" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="Nationality" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="Note" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="CIDCard" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="UDateTime" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Taxrate" Type="int" Nullable="false" />
+          <Property Name="CPensionRate" Type="int" Nullable="false" />
+          <Property Name="Annbouns" Type="int" Nullable="false" />
+          <Property Name="Annbouns_month" Type="int" Nullable="false" />
+          <Property Name="Annbouns_salary" Type="int" Nullable="false" />
+          <Property Name="AddressZipId" Type="nchar" MaxLength="5" Nullable="false" />
+          <Property Name="AddressZipText" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Address" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="AddressRegZipId" Type="nchar" MaxLength="5" Nullable="false" />
+          <Property Name="AddressRegZipText" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="AddressReg" Type="nchar" MaxLength="60" Nullable="false" />
+        </EntityType>
         <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="IDCard" />
@@ -104,6 +140,30 @@
           <Property Name="CIDCard" Type="char" MaxLength="20" Nullable="false" />
           <Property Name="CreateDateTime" Type="char" MaxLength="20" Nullable="false" />
         </EntityType>
+        <EntityType Name="Sch_Organ">
+          <Key>
+            <PropertyRef Name="UnitCode" />
+          </Key>
+          <Property Name="UnitName" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="UnitEngName" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="UnitShort" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="UnitEngShort" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="UnitCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ManagerName" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="UnitWWW" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="UnitEmail" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="UnitTel" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="UnitFax" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="Level1Unit" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="Level2Unit" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="SchLocal" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="CreateDateTime" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="CIDCard" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Note" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="ManagerTitle" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Other_mark" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="AccountingCode" Type="char" MaxLength="4" Nullable="false" />
+        </EntityType>
         <EntityType Name="Stu_Status">
           <Key>
             <PropertyRef Name="StudentNo" />
@@ -188,11 +248,285 @@
           <Property Name="ChangeDt" Type="datetime" Nullable="false" />
           <Property Name="IsForgot" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'ntust_info.dbo.v_AD_Labor' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="v_AD_Labor">
+          <Key>
+            <PropertyRef Name="Listno" />
+            <PropertyRef Name="IDcard" />
+            <PropertyRef Name="ADclass" />
+            <PropertyRef Name="Statusno" />
+            <PropertyRef Name="Studyno" />
+            <PropertyRef Name="AccSource" />
+            <PropertyRef Name="ListnoSrc" />
+            <PropertyRef Name="GovInsu" />
+            <PropertyRef Name="GInsuDesc" />
+            <PropertyRef Name="SpecStatus" />
+            <PropertyRef Name="Accno" />
+            <PropertyRef Name="Leader" />
+            <PropertyRef Name="SubLeader" />
+            <PropertyRef Name="Salary" />
+            <PropertyRef Name="YearEndMonth" />
+            <PropertyRef Name="YearEndBonuses" />
+            <PropertyRef Name="Pensionrate" />
+            <PropertyRef Name="Department" />
+            <PropertyRef Name="SelfLabor" />
+            <PropertyRef Name="SelfPension" />
+            <PropertyRef Name="SelfHealth" />
+            <PropertyRef Name="EmpLabor" />
+            <PropertyRef Name="EmpPension" />
+            <PropertyRef Name="EmpHealth" />
+            <PropertyRef Name="Note" />
+            <PropertyRef Name="CIDCard" />
+            <PropertyRef Name="UDateTime" />
+            <PropertyRef Name="ProjectName" />
+            <PropertyRef Name="Bonus" />
+            <PropertyRef Name="FamilyNum" />
+          </Key>
+          <Property Name="Listno" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="IDcard" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ADclass" Type="nchar" MaxLength="2" Nullable="false" />
+          <Property Name="Statusno" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="Studyno" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="AccSource" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="ListnoSrc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="GovInsu" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="GInsuDesc" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SpecStatus" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="Accno" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Leader" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="SubLeader" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Term_from" Type="datetime" />
+          <Property Name="Term_end" Type="datetime" />
+          <Property Name="QuitDate" Type="datetime" />
+          <Property Name="Salary" Type="int" Nullable="false" />
+          <Property Name="YearEndMonth" Type="float" Nullable="false" />
+          <Property Name="YearEndBonuses" Type="int" Nullable="false" />
+          <Property Name="Pensionrate" Type="int" Nullable="false" />
+          <Property Name="Department" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="SelfLabor" Type="int" Nullable="false" />
+          <Property Name="SelfPension" Type="int" Nullable="false" />
+          <Property Name="SelfHealth" Type="int" Nullable="false" />
+          <Property Name="EmpLabor" Type="int" Nullable="false" />
+          <Property Name="EmpPension" Type="int" Nullable="false" />
+          <Property Name="EmpHealth" Type="int" Nullable="false" />
+          <Property Name="FamilyHealth" Type="int" />
+          <Property Name="Note" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CIDCard" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="UDateTime" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Bonus" Type="int" Nullable="false" />
+          <Property Name="FamilyNum" Type="varchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'ntust_info.dbo.v_AD_List' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="v_AD_List">
+          <Key>
+            <PropertyRef Name="Listno" />
+            <PropertyRef Name="Locked" />
+            <PropertyRef Name="Confirmed" />
+            <PropertyRef Name="Confirm_name" />
+            <PropertyRef Name="ChangeFrom" />
+            <PropertyRef Name="Note" />
+            <PropertyRef Name="CIDCard" />
+            <PropertyRef Name="UDateTime" />
+            <PropertyRef Name="PerCheck_name" />
+            <PropertyRef Name="InsCheck_name" />
+            <PropertyRef Name="BasCheck_name" />
+          </Key>
+          <Property Name="Listno" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Locked" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Confirmed" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Confirm_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ConfirmDate" Type="datetime" />
+          <Property Name="ChangeFrom" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="StopDate" Type="datetime" />
+          <Property Name="Note" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CIDCard" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UDateTime" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ExpirDate" Type="datetime" />
+          <Property Name="PerCheck_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PerCheck_Date" Type="datetime" />
+          <Property Name="InsCheck_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="InsCheck_Date" Type="datetime" />
+          <Property Name="BasCheck_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BasCheck_Date" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'ntust_info.dbo.v_nowperson_w' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="v_nowperson_w">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Password" />
+            <PropertyRef Name="Birthday" />
+            <PropertyRef Name="email2" />
+          </Key>
+          <Property Name="unitname" Type="char" MaxLength="30" />
+          <Property Name="Name" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="IDcard" Type="nchar" MaxLength="10" />
+          <Property Name="Password" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="Birthday" Type="nchar" MaxLength="8" Nullable="false" />
+          <Property Name="WorkTitle" Type="nchar" MaxLength="20" />
+          <Property Name="Term_start" Type="nchar" MaxLength="7" />
+          <Property Name="Term_end" Type="nchar" MaxLength="7" />
+          <Property Name="Worksno" Type="int" />
+          <Property Name="email2" Type="nchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'ntust_info.dbo.v_schoolmember' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="v_schoolmember">
+          <Key>
+            <PropertyRef Name="Department" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="IDCard" />
+            <PropertyRef Name="Address" />
+            <PropertyRef Name="IDstatus" />
+            <PropertyRef Name="Tel" />
+            <PropertyRef Name="MobilePhone" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="BankNo" />
+            <PropertyRef Name="Account" />
+            <PropertyRef Name="Note" />
+            <PropertyRef Name="PB_Mark" />
+            <PropertyRef Name="CIDCard" />
+            <PropertyRef Name="UDDateTime" />
+            <PropertyRef Name="jobtitle" />
+            <PropertyRef Name="rank" />
+            <PropertyRef Name="nowcondition" />
+            <PropertyRef Name="cardno" />
+          </Key>
+          <Property Name="Department" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDCard" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Address" Type="nchar" MaxLength="200" Nullable="false" />
+          <Property Name="IDstatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Tel" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="MobilePhone" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="Email" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="BankNo" Type="char" MaxLength="7" Nullable="false" />
+          <Property Name="Account" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Note" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="PB_Mark" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CIDCard" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="UDDateTime" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="jobtitle" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="rank" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="nowcondition" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="cardno" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
         <EntityContainer Name="ntust_infoModelStoreContainer">
+          <EntitySet Name="Cont_employee" EntityType="Self.Cont_employee" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Outgoing_Stu" EntityType="Self.Outgoing_Stu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sch_Organ" EntityType="Self.Sch_Organ" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Stu_Status" EntityType="Self.Stu_Status" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sys_SSOPwd" EntityType="Self.sys_SSOPwd" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="v_AD_Labor" EntityType="Self.v_AD_Labor" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [v_AD_Labor].[Listno] AS [Listno], 
+    [v_AD_Labor].[IDcard] AS [IDcard], 
+    [v_AD_Labor].[ADclass] AS [ADclass], 
+    [v_AD_Labor].[Statusno] AS [Statusno], 
+    [v_AD_Labor].[Studyno] AS [Studyno], 
+    [v_AD_Labor].[AccSource] AS [AccSource], 
+    [v_AD_Labor].[ListnoSrc] AS [ListnoSrc], 
+    [v_AD_Labor].[GovInsu] AS [GovInsu], 
+    [v_AD_Labor].[GInsuDesc] AS [GInsuDesc], 
+    [v_AD_Labor].[SpecStatus] AS [SpecStatus], 
+    [v_AD_Labor].[Accno] AS [Accno], 
+    [v_AD_Labor].[Leader] AS [Leader], 
+    [v_AD_Labor].[SubLeader] AS [SubLeader], 
+    [v_AD_Labor].[Term_from] AS [Term_from], 
+    [v_AD_Labor].[Term_end] AS [Term_end], 
+    [v_AD_Labor].[QuitDate] AS [QuitDate], 
+    [v_AD_Labor].[Salary] AS [Salary], 
+    [v_AD_Labor].[YearEndMonth] AS [YearEndMonth], 
+    [v_AD_Labor].[YearEndBonuses] AS [YearEndBonuses], 
+    [v_AD_Labor].[Pensionrate] AS [Pensionrate], 
+    [v_AD_Labor].[Department] AS [Department], 
+    [v_AD_Labor].[SelfLabor] AS [SelfLabor], 
+    [v_AD_Labor].[SelfPension] AS [SelfPension], 
+    [v_AD_Labor].[SelfHealth] AS [SelfHealth], 
+    [v_AD_Labor].[EmpLabor] AS [EmpLabor], 
+    [v_AD_Labor].[EmpPension] AS [EmpPension], 
+    [v_AD_Labor].[EmpHealth] AS [EmpHealth], 
+    [v_AD_Labor].[FamilyHealth] AS [FamilyHealth], 
+    [v_AD_Labor].[Note] AS [Note], 
+    [v_AD_Labor].[CIDCard] AS [CIDCard], 
+    [v_AD_Labor].[UDateTime] AS [UDateTime], 
+    [v_AD_Labor].[ProjectName] AS [ProjectName], 
+    [v_AD_Labor].[Bonus] AS [Bonus], 
+    [v_AD_Labor].[FamilyNum] AS [FamilyNum]
+    FROM [dbo].[v_AD_Labor] AS [v_AD_Labor]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_AD_List" EntityType="Self.v_AD_List" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [v_AD_List].[Listno] AS [Listno], 
+    [v_AD_List].[Locked] AS [Locked], 
+    [v_AD_List].[Confirmed] AS [Confirmed], 
+    [v_AD_List].[Confirm_name] AS [Confirm_name], 
+    [v_AD_List].[ConfirmDate] AS [ConfirmDate], 
+    [v_AD_List].[ChangeFrom] AS [ChangeFrom], 
+    [v_AD_List].[StopDate] AS [StopDate], 
+    [v_AD_List].[Note] AS [Note], 
+    [v_AD_List].[CIDCard] AS [CIDCard], 
+    [v_AD_List].[UDateTime] AS [UDateTime], 
+    [v_AD_List].[ExpirDate] AS [ExpirDate], 
+    [v_AD_List].[PerCheck_name] AS [PerCheck_name], 
+    [v_AD_List].[PerCheck_Date] AS [PerCheck_Date], 
+    [v_AD_List].[InsCheck_name] AS [InsCheck_name], 
+    [v_AD_List].[InsCheck_Date] AS [InsCheck_Date], 
+    [v_AD_List].[BasCheck_name] AS [BasCheck_name], 
+    [v_AD_List].[BasCheck_Date] AS [BasCheck_Date]
+    FROM [dbo].[v_AD_List] AS [v_AD_List]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_nowperson_w" EntityType="Self.v_nowperson_w" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [v_nowperson_w].[unitname] AS [unitname], 
+    [v_nowperson_w].[Name] AS [Name], 
+    [v_nowperson_w].[IDcard] AS [IDcard], 
+    [v_nowperson_w].[Password] AS [Password], 
+    [v_nowperson_w].[Birthday] AS [Birthday], 
+    [v_nowperson_w].[WorkTitle] AS [WorkTitle], 
+    [v_nowperson_w].[Term_start] AS [Term_start], 
+    [v_nowperson_w].[Term_end] AS [Term_end], 
+    [v_nowperson_w].[Worksno] AS [Worksno], 
+    [v_nowperson_w].[email2] AS [email2]
+    FROM [dbo].[v_nowperson_w] AS [v_nowperson_w]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_schoolmember" EntityType="Self.v_schoolmember" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [v_schoolmember].[Department] AS [Department], 
+    [v_schoolmember].[Name] AS [Name], 
+    [v_schoolmember].[IDCard] AS [IDCard], 
+    [v_schoolmember].[Address] AS [Address], 
+    [v_schoolmember].[IDstatus] AS [IDstatus], 
+    [v_schoolmember].[Tel] AS [Tel], 
+    [v_schoolmember].[MobilePhone] AS [MobilePhone], 
+    [v_schoolmember].[Email] AS [Email], 
+    [v_schoolmember].[BankNo] AS [BankNo], 
+    [v_schoolmember].[Account] AS [Account], 
+    [v_schoolmember].[Note] AS [Note], 
+    [v_schoolmember].[PB_Mark] AS [PB_Mark], 
+    [v_schoolmember].[CIDCard] AS [CIDCard], 
+    [v_schoolmember].[UDDateTime] AS [UDDateTime], 
+    [v_schoolmember].[jobtitle] AS [jobtitle], 
+    [v_schoolmember].[rank] AS [rank], 
+    [v_schoolmember].[nowcondition] AS [nowcondition], 
+    [v_schoolmember].[cardno] AS [cardno]
+    FROM [dbo].[v_schoolmember] AS [v_schoolmember]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -263,6 +597,13 @@
           <EntitySet Name="sys_SSOPwd" EntityType="ntust_infoModel.sys_SSOPwd" />
           <EntitySet Name="Outgoing_Stu" EntityType="ntust_infoModel.Outgoing_Stu" />
           <EntitySet Name="Stu_Status" EntityType="ntust_infoModel.Stu_Status" />
+          <EntitySet Name="Cont_employee" EntityType="ntust_infoModel.Cont_employee" />
+          <EntitySet Name="Sch_Organ" EntityType="ntust_infoModel.Sch_Organ" />
+          <EntitySet Name="sysdiagrams" EntityType="ntust_infoModel.sysdiagrams" />
+          <EntitySet Name="v_AD_Labor" EntityType="ntust_infoModel.v_AD_Labor" />
+          <EntitySet Name="v_AD_List" EntityType="ntust_infoModel.v_AD_List" />
+          <EntitySet Name="v_nowperson_w" EntityType="ntust_infoModel.v_nowperson_w" />
+          <EntitySet Name="v_schoolmember" EntityType="ntust_infoModel.v_schoolmember" />
         </EntityContainer>
         <EntityType Name="sys_SSOPwd">
           <Key>
@@ -386,6 +727,234 @@
           <Property Name="Auth_mark" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Alumni_Agree" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="VisitingRelativesMark" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cont_employee">
+          <Key>
+            <PropertyRef Name="IDcard" />
+          </Key>
+          <Property Name="IDcard" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Pno" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+          <Property Name="Birthday" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="true" />
+          <Property Name="Sex" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="Bank" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Account" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Tel" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="Mobilephone" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+          <Property Name="Education" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Subsidy" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="Aborigine" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="Retired" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="Foreignmk" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="Nationality" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="Note" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="CIDCard" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="UDateTime" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Taxrate" Type="Int32" Nullable="false" />
+          <Property Name="CPensionRate" Type="Int32" Nullable="false" />
+          <Property Name="Annbouns" Type="Int32" Nullable="false" />
+          <Property Name="Annbouns_month" Type="Int32" Nullable="false" />
+          <Property Name="Annbouns_salary" Type="Int32" Nullable="false" />
+          <Property Name="AddressZipId" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="AddressZipText" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+          <Property Name="AddressRegZipId" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="AddressRegZipText" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="AddressReg" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Sch_Organ">
+          <Key>
+            <PropertyRef Name="UnitCode" />
+          </Key>
+          <Property Name="UnitName" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="UnitEngName" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="UnitShort" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="UnitEngShort" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="UnitCode" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ManagerName" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="UnitWWW" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="UnitEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="UnitTel" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="UnitFax" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="Level1Unit" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="Level2Unit" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="SchLocal" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="CreateDateTime" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="CIDCard" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Note" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="ManagerTitle" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Other_mark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="AccountingCode" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="v_AD_Labor">
+          <Key>
+            <PropertyRef Name="Listno" />
+            <PropertyRef Name="IDcard" />
+            <PropertyRef Name="ADclass" />
+            <PropertyRef Name="Statusno" />
+            <PropertyRef Name="Studyno" />
+            <PropertyRef Name="AccSource" />
+            <PropertyRef Name="ListnoSrc" />
+            <PropertyRef Name="GovInsu" />
+            <PropertyRef Name="GInsuDesc" />
+            <PropertyRef Name="SpecStatus" />
+            <PropertyRef Name="Accno" />
+            <PropertyRef Name="Leader" />
+            <PropertyRef Name="SubLeader" />
+            <PropertyRef Name="Salary" />
+            <PropertyRef Name="YearEndMonth" />
+            <PropertyRef Name="YearEndBonuses" />
+            <PropertyRef Name="Pensionrate" />
+            <PropertyRef Name="Department" />
+            <PropertyRef Name="SelfLabor" />
+            <PropertyRef Name="SelfPension" />
+            <PropertyRef Name="SelfHealth" />
+            <PropertyRef Name="EmpLabor" />
+            <PropertyRef Name="EmpPension" />
+            <PropertyRef Name="EmpHealth" />
+            <PropertyRef Name="Note" />
+            <PropertyRef Name="CIDCard" />
+            <PropertyRef Name="UDateTime" />
+            <PropertyRef Name="ProjectName" />
+            <PropertyRef Name="Bonus" />
+            <PropertyRef Name="FamilyNum" />
+          </Key>
+          <Property Name="Listno" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="IDcard" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ADclass" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="Statusno" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="Studyno" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="AccSource" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="ListnoSrc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="GovInsu" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="GInsuDesc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SpecStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="Accno" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Leader" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SubLeader" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Term_from" Type="DateTime" Precision="3" />
+          <Property Name="Term_end" Type="DateTime" Precision="3" />
+          <Property Name="QuitDate" Type="DateTime" Precision="3" />
+          <Property Name="Salary" Type="Int32" Nullable="false" />
+          <Property Name="YearEndMonth" Type="Double" Nullable="false" />
+          <Property Name="YearEndBonuses" Type="Int32" Nullable="false" />
+          <Property Name="Pensionrate" Type="Int32" Nullable="false" />
+          <Property Name="Department" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SelfLabor" Type="Int32" Nullable="false" />
+          <Property Name="SelfPension" Type="Int32" Nullable="false" />
+          <Property Name="SelfHealth" Type="Int32" Nullable="false" />
+          <Property Name="EmpLabor" Type="Int32" Nullable="false" />
+          <Property Name="EmpPension" Type="Int32" Nullable="false" />
+          <Property Name="EmpHealth" Type="Int32" Nullable="false" />
+          <Property Name="FamilyHealth" Type="Int32" />
+          <Property Name="Note" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CIDCard" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="UDateTime" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectName" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Bonus" Type="Int32" Nullable="false" />
+          <Property Name="FamilyNum" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="v_AD_List">
+          <Key>
+            <PropertyRef Name="Listno" />
+            <PropertyRef Name="Locked" />
+            <PropertyRef Name="Confirmed" />
+            <PropertyRef Name="Confirm_name" />
+            <PropertyRef Name="ChangeFrom" />
+            <PropertyRef Name="Note" />
+            <PropertyRef Name="CIDCard" />
+            <PropertyRef Name="UDateTime" />
+            <PropertyRef Name="PerCheck_name" />
+            <PropertyRef Name="InsCheck_name" />
+            <PropertyRef Name="BasCheck_name" />
+          </Key>
+          <Property Name="Listno" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Locked" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Confirmed" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Confirm_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ConfirmDate" Type="DateTime" Precision="3" />
+          <Property Name="ChangeFrom" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="StopDate" Type="DateTime" Precision="3" />
+          <Property Name="Note" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CIDCard" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UDateTime" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ExpirDate" Type="DateTime" Precision="3" />
+          <Property Name="PerCheck_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PerCheck_Date" Type="DateTime" Precision="3" />
+          <Property Name="InsCheck_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="InsCheck_Date" Type="DateTime" Precision="3" />
+          <Property Name="BasCheck_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BasCheck_Date" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="v_nowperson_w">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Password" />
+            <PropertyRef Name="Birthday" />
+            <PropertyRef Name="email2" />
+          </Key>
+          <Property Name="unitname" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+          <Property Name="IDcard" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="Birthday" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="true" />
+          <Property Name="WorkTitle" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Term_start" Type="String" MaxLength="7" FixedLength="true" Unicode="true" />
+          <Property Name="Term_end" Type="String" MaxLength="7" FixedLength="true" Unicode="true" />
+          <Property Name="Worksno" Type="Int32" />
+          <Property Name="email2" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="v_schoolmember">
+          <Key>
+            <PropertyRef Name="Department" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="IDCard" />
+            <PropertyRef Name="Address" />
+            <PropertyRef Name="IDstatus" />
+            <PropertyRef Name="Tel" />
+            <PropertyRef Name="MobilePhone" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="BankNo" />
+            <PropertyRef Name="Account" />
+            <PropertyRef Name="Note" />
+            <PropertyRef Name="PB_Mark" />
+            <PropertyRef Name="CIDCard" />
+            <PropertyRef Name="UDDateTime" />
+            <PropertyRef Name="jobtitle" />
+            <PropertyRef Name="rank" />
+            <PropertyRef Name="nowcondition" />
+            <PropertyRef Name="cardno" />
+          </Key>
+          <Property Name="Department" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="IDCard" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="IDstatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Tel" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="MobilePhone" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="BankNo" Type="String" Nullable="false" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Name="Account" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="Note" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="PB_Mark" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CIDCard" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="UDDateTime" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="jobtitle" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="rank" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="nowcondition" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="cardno" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -577,6 +1146,182 @@
                 <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
                 <ScalarProperty Name="Semester" ColumnName="Semester" />
                 <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cont_employee">
+            <EntityTypeMapping TypeName="ntust_infoModel.Cont_employee">
+              <MappingFragment StoreEntitySet="Cont_employee">
+                <ScalarProperty Name="AddressReg" ColumnName="AddressReg" />
+                <ScalarProperty Name="AddressRegZipText" ColumnName="AddressRegZipText" />
+                <ScalarProperty Name="AddressRegZipId" ColumnName="AddressRegZipId" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="AddressZipText" ColumnName="AddressZipText" />
+                <ScalarProperty Name="AddressZipId" ColumnName="AddressZipId" />
+                <ScalarProperty Name="Annbouns_salary" ColumnName="Annbouns_salary" />
+                <ScalarProperty Name="Annbouns_month" ColumnName="Annbouns_month" />
+                <ScalarProperty Name="Annbouns" ColumnName="Annbouns" />
+                <ScalarProperty Name="CPensionRate" ColumnName="CPensionRate" />
+                <ScalarProperty Name="Taxrate" ColumnName="Taxrate" />
+                <ScalarProperty Name="UDateTime" ColumnName="UDateTime" />
+                <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="Foreignmk" ColumnName="Foreignmk" />
+                <ScalarProperty Name="Retired" ColumnName="Retired" />
+                <ScalarProperty Name="Aborigine" ColumnName="Aborigine" />
+                <ScalarProperty Name="Subsidy" ColumnName="Subsidy" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobilephone" ColumnName="Mobilephone" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Bank" ColumnName="Bank" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Pno" ColumnName="Pno" />
+                <ScalarProperty Name="IDcard" ColumnName="IDcard" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sch_Organ">
+            <EntityTypeMapping TypeName="ntust_infoModel.Sch_Organ">
+              <MappingFragment StoreEntitySet="Sch_Organ">
+                <ScalarProperty Name="AccountingCode" ColumnName="AccountingCode" />
+                <ScalarProperty Name="Other_mark" ColumnName="Other_mark" />
+                <ScalarProperty Name="ManagerTitle" ColumnName="ManagerTitle" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="SchLocal" ColumnName="SchLocal" />
+                <ScalarProperty Name="Level2Unit" ColumnName="Level2Unit" />
+                <ScalarProperty Name="Level1Unit" ColumnName="Level1Unit" />
+                <ScalarProperty Name="UnitFax" ColumnName="UnitFax" />
+                <ScalarProperty Name="UnitTel" ColumnName="UnitTel" />
+                <ScalarProperty Name="UnitEmail" ColumnName="UnitEmail" />
+                <ScalarProperty Name="UnitWWW" ColumnName="UnitWWW" />
+                <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="UnitEngShort" ColumnName="UnitEngShort" />
+                <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+                <ScalarProperty Name="UnitEngName" ColumnName="UnitEngName" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ntust_infoModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_AD_Labor">
+            <EntityTypeMapping TypeName="ntust_infoModel.v_AD_Labor">
+              <MappingFragment StoreEntitySet="v_AD_Labor">
+                <ScalarProperty Name="FamilyNum" ColumnName="FamilyNum" />
+                <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="UDateTime" ColumnName="UDateTime" />
+                <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="FamilyHealth" ColumnName="FamilyHealth" />
+                <ScalarProperty Name="EmpHealth" ColumnName="EmpHealth" />
+                <ScalarProperty Name="EmpPension" ColumnName="EmpPension" />
+                <ScalarProperty Name="EmpLabor" ColumnName="EmpLabor" />
+                <ScalarProperty Name="SelfHealth" ColumnName="SelfHealth" />
+                <ScalarProperty Name="SelfPension" ColumnName="SelfPension" />
+                <ScalarProperty Name="SelfLabor" ColumnName="SelfLabor" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Pensionrate" ColumnName="Pensionrate" />
+                <ScalarProperty Name="YearEndBonuses" ColumnName="YearEndBonuses" />
+                <ScalarProperty Name="YearEndMonth" ColumnName="YearEndMonth" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="QuitDate" ColumnName="QuitDate" />
+                <ScalarProperty Name="Term_end" ColumnName="Term_end" />
+                <ScalarProperty Name="Term_from" ColumnName="Term_from" />
+                <ScalarProperty Name="SubLeader" ColumnName="SubLeader" />
+                <ScalarProperty Name="Leader" ColumnName="Leader" />
+                <ScalarProperty Name="Accno" ColumnName="Accno" />
+                <ScalarProperty Name="SpecStatus" ColumnName="SpecStatus" />
+                <ScalarProperty Name="GInsuDesc" ColumnName="GInsuDesc" />
+                <ScalarProperty Name="GovInsu" ColumnName="GovInsu" />
+                <ScalarProperty Name="ListnoSrc" ColumnName="ListnoSrc" />
+                <ScalarProperty Name="AccSource" ColumnName="AccSource" />
+                <ScalarProperty Name="Studyno" ColumnName="Studyno" />
+                <ScalarProperty Name="Statusno" ColumnName="Statusno" />
+                <ScalarProperty Name="ADclass" ColumnName="ADclass" />
+                <ScalarProperty Name="IDcard" ColumnName="IDcard" />
+                <ScalarProperty Name="Listno" ColumnName="Listno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_AD_List">
+            <EntityTypeMapping TypeName="ntust_infoModel.v_AD_List">
+              <MappingFragment StoreEntitySet="v_AD_List">
+                <ScalarProperty Name="BasCheck_Date" ColumnName="BasCheck_Date" />
+                <ScalarProperty Name="BasCheck_name" ColumnName="BasCheck_name" />
+                <ScalarProperty Name="InsCheck_Date" ColumnName="InsCheck_Date" />
+                <ScalarProperty Name="InsCheck_name" ColumnName="InsCheck_name" />
+                <ScalarProperty Name="PerCheck_Date" ColumnName="PerCheck_Date" />
+                <ScalarProperty Name="PerCheck_name" ColumnName="PerCheck_name" />
+                <ScalarProperty Name="ExpirDate" ColumnName="ExpirDate" />
+                <ScalarProperty Name="UDateTime" ColumnName="UDateTime" />
+                <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="StopDate" ColumnName="StopDate" />
+                <ScalarProperty Name="ChangeFrom" ColumnName="ChangeFrom" />
+                <ScalarProperty Name="ConfirmDate" ColumnName="ConfirmDate" />
+                <ScalarProperty Name="Confirm_name" ColumnName="Confirm_name" />
+                <ScalarProperty Name="Confirmed" ColumnName="Confirmed" />
+                <ScalarProperty Name="Locked" ColumnName="Locked" />
+                <ScalarProperty Name="Listno" ColumnName="Listno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_nowperson_w">
+            <EntityTypeMapping TypeName="ntust_infoModel.v_nowperson_w">
+              <MappingFragment StoreEntitySet="v_nowperson_w">
+                <ScalarProperty Name="email2" ColumnName="email2" />
+                <ScalarProperty Name="Worksno" ColumnName="Worksno" />
+                <ScalarProperty Name="Term_end" ColumnName="Term_end" />
+                <ScalarProperty Name="Term_start" ColumnName="Term_start" />
+                <ScalarProperty Name="WorkTitle" ColumnName="WorkTitle" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IDcard" ColumnName="IDcard" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="unitname" ColumnName="unitname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_schoolmember">
+            <EntityTypeMapping TypeName="ntust_infoModel.v_schoolmember">
+              <MappingFragment StoreEntitySet="v_schoolmember">
+                <ScalarProperty Name="cardno" ColumnName="cardno" />
+                <ScalarProperty Name="nowcondition" ColumnName="nowcondition" />
+                <ScalarProperty Name="rank" ColumnName="rank" />
+                <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+                <ScalarProperty Name="UDDateTime" ColumnName="UDDateTime" />
+                <ScalarProperty Name="CIDCard" ColumnName="CIDCard" />
+                <ScalarProperty Name="PB_Mark" ColumnName="PB_Mark" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="BankNo" ColumnName="BankNo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="IDstatus" ColumnName="IDstatus" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

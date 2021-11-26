@@ -8,3 +8,4 @@ C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Identity\bi
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Identity\obj\Debug\Demo.Identity.csproj.CoreCompileInputs.cache
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Identity\obj\Debug\Demo.Identity.dll
 C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Identity\obj\Debug\Demo.Identity.pdb
+C:\Users\user\Downloads\電中_專案開發架構\ClassLibrary1\Demo.Identity\obj\Debug\Demo.Identity.csprojAssemblyReference.cache
