@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cont_employee.cs">
+      <DependentUpon>TestModel1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs">
       <DependentUpon>TestModel1.tt</DependentUpon>
     </Compile>
@@ -65,7 +68,13 @@
       <DependentUpon>TestModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sch_Organ.cs">
+      <DependentUpon>TestModel1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Stu_Status.cs">
+      <DependentUpon>TestModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
       <DependentUpon>TestModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="sys_SSOPwd.cs">
@@ -85,6 +94,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TestModel1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="v_AD_Labor.cs">
+      <DependentUpon>TestModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_AD_List.cs">
+      <DependentUpon>TestModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_nowperson_w.cs">
+      <DependentUpon>TestModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_schoolmember.cs">
+      <DependentUpon>TestModel1.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

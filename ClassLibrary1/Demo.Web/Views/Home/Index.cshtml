@@ -1,38 +1,58 @@
-﻿<div id="formId">
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="RadioOptions" id="Employee" value="0" v-model="form.identity">
-        <label class="form-check-label" for="Employee">職員/教師</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="RadioOptions" id="Student" value="1" v-model="form.identity">
-        <label class="form-check-label" for="Student">學生</label>
-    </div>
-    <div class="mb-3">
-        <label for="Target" class="form-label">身分證/學號</label>
-        <input type="text" class="form-control" id="Target" v-model="form.target">
-    </div>
-    @Html.AntiForgeryToken()
-    <button class="btn btn-primary" v-on:click="Send">Submit</button>
+﻿<div class="container">
+    <div id="formId">
+        <div class="vstack gap-3">
+            <h3>忘記密碼查詢</h3>
+            <div class="mb-3 row">
+                <div class="col-2">請選擇身分：</div>
+                <div class="col-10">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="RadioOptions" id="Employee" value="0" v-model="form.identity" checked>
+                        <label class="form-check-label" for="Employee">職員/教師</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="RadioOptions" id="Student" value="1" v-model="form.identity">
+                        <label class="form-check-label" for="Student">學生</label>
+                    </div>
+                </div>
+            </div>
 
-<div>
-    <p>{{IsForgetPasswordInfo.IsForgetPassword}}</p>
-    <p>{{IsForgetPasswordInfo.ChangeTime}}</p>
-    <p>{{IsForgetPasswordInfo.Email}}</p>
-    <p>{{IsForgetPasswordInfo.IsStudent}}</p>
-    <p>{{IsForgetPasswordInfo.IsEmployee}}</p>
+            <div class="mb-3 row">
+                <label for="Target" class="col-form-label col-2" for="Target">身分證/學號：</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="Target" v-model="form.target">
+                </div>
+            </div>
+            @Html.AntiForgeryToken()
+            <button class="btn btn-primary" v-on:click="Send">查詢</button>
+            <div>
+                <hr />
+                <h3>查詢結果</h3>
+                <p>是否忘記密碼：{{IsForgetPasswordInfo.IsForgetPassword}}</p>
+                <p>上次密碼變更時間：{{IsForgetPasswordInfo.ChangeTime}}</p>
+                <p>電子信箱：{{IsForgetPasswordInfo.Email}}</p>
+                <p>是否為學生：{{IsForgetPasswordInfo.IsStudent}}</p>
+                <p>是否為教師：{{IsForgetPasswordInfo.IsEmployee}}</p>
+
+                <div class="alert alert-primary" role="alert">
+                    <h5>專案(計畫)助理資訊</h5>
+                    <p>聘僱流程是否尚在進行中：{{IsForgetPasswordInfo.Confirmed}}</p>
+                    <p>聘僱起日：{{IsForgetPasswordInfo.Tern_from}}</p>
+                    <p>聘僱迄日：{{IsForgetPasswordInfo.Tern_end}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-</div>
 
-
-<script>
+    <script>
     var form = new Vue({
         el: '#formId',
         ready: function () {
         },
         data: {
             form: {
-                identity: '',
+                identity: 0,
                 target: ''
             },
             verificationToken: '',
@@ -42,11 +62,13 @@
                 Email: '',
                 IsStudent: '',
                 IsEmployee: '',
+                Confirmed: '',
+                Tern_from: '',
+                Tern_end: ''
             },
         },
         methods: {
             Send: function () {
-                ///範例14:取得學年度 採用 ajax post
                 var vm = this;
                 $.ajax({
                     url: "@Url.Action("Send", "Home")",
@@ -59,16 +81,28 @@
                     success: function (rdatas) {
                         if (JSON.parse(rdatas.serverMessage) == '') {
                             vm.IsForgetPasswordInfo = JSON.parse(rdatas.serverModel);
+                            vm.showAlert(JSON.parse(rdatas.serverMessage), true);
+                            Object.assign(vm.form, {
+                                identity: '',
+                                target: ''
+                            })
                         }
                         else {
-                            vm.showAlert(JSON.parse(rdatas.serverMessage), true);
+                            alert(JSON.parse(rdatas.serverMessage));
                         }
                     },
                     error: function (jqXHR, errorThrown) {
                         alert(errorThrown);
                     }
                 });
-            }
+
+            },
+            showAlert: function (message, isShow) {
+                var vm = this;
+                vm.alert.message = message;
+                vm.alert.show = isShow;
+                $('#Alert').modal('show');
+            },
         },
         created: function () {
             this.verificationToken = $('input[name="__RequestVerificationToken"]').val();
@@ -82,4 +116,4 @@
         watch: {
         },
     })
-</script>
+    </script>

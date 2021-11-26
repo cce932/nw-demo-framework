@@ -26,11 +26,12 @@ namespace Demo.Web.Controllers
         {
             var result = spt_monitorService.CheckIsForgetInfo(target);
             string message = "";
+            if (result == null)
+                message = "查無資料";
+
             string serverModel = JsonConvert.SerializeObject(result);
             string serverMessage = JsonConvert.SerializeObject(message);
-            return Json(new { serverModel,serverMessage }, JsonRequestBehavior.AllowGet);
+            return Json(new { serverModel, serverMessage }, JsonRequestBehavior.AllowGet);
         }
-
-
     }
 }

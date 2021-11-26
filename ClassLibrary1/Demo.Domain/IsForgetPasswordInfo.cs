@@ -28,10 +28,24 @@ namespace Demo.Domain
         /// </summary>
         public Boolean IsStudent { get; set; }
 
-
         /// <summary>
         /// 是否在職
         /// </summary>
         public Boolean IsEmployee { get; set; }
+
+        /// <summary>
+        /// 流程是否在進行中
+        /// </summary>
+        public String Confirmed { get; set; }
+
+        /// <summary>
+        /// 專案(計畫)助理 聘期起日
+        /// </summary>
+        public String Tern_from { get; set; }
+
+        /// <summary>
+        /// 專案(計畫)助理 聘期迄日
+        /// </summary>
+        public String Tern_end { get; set; }
     }
 }
