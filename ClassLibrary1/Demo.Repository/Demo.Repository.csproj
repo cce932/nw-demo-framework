@@ -41,23 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cont_employeeRepository.cs" />
+    <Compile Include="interface\IEmployeeRepository.cs" />
+    <Compile Include="interface\IAD_ListRepository.cs" />
+    <Compile Include="interface\ICont_employeeRepository.cs" />
     <Compile Include="interface\IAD_LaborRepository.cs" />
-    <Compile Include="v_nowperson_wRepository.cs" />
+    <Compile Include="interface\IschoolmemberRepository.cs" />
+    <Compile Include="interface\IV_Nowperson_WRepository.cs" />
+    <Compile Include="employeeRepository.cs" />
+    <Compile Include="cont_employeeRepository.cs" />
     <Compile Include="ad_ListRepository.cs" />
     <Compile Include="ad_LaborRepository.cs" />
-    <Compile Include="interface\IV_Nowperson_WRepository.cs" />
-    <Compile Include="interface\IAD_ListRepository.cs" />
-    <Compile Include="interface\IschoolmemberRepository.cs" />
+    <Compile Include="v_nowperson_wRepository.cs" />
+    <Compile Include="schoolmemberRepository.cs" />
     <Compile Include="interface\Istu_StatusRepository.cs" />
     <Compile Include="interface\Ioutgoing_StuRepository.cs" />
-    <Compile Include="interface\IEmployeeRepository.cs" />
-    <Compile Include="interface\ICont_employeeRepository.cs" />
     <Compile Include="interface\Isys_SSOPwdRepository.cs" />
-    <Compile Include="schoolmemberRepository.cs" />
     <Compile Include="stu_StatusRepository.cs" />
     <Compile Include="outgoing_StuRepository.cs" />
-    <Compile Include="employeeRepository.cs" />
     <Compile Include="sys_SSOPwdRepository.cs" />
     <Compile Include="spt_monitorRepository.cs" />
     <Compile Include="interface\Ispt_monitorRepository.cs" />
